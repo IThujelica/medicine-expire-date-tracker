@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="grey">#626271</color>
+    <color name="white">#D0CEd0</color>
+    <color name="blue">#39559E</color>
+    <color name="purple">#8E2BB3</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <color name="yellow">#EFDF38</color>
+
+    <color name="base">#39559e</color>
+    <color name="selected">#018FDE</color>
+    <color name="unselected">#D0CED0</color>
+    <color name="expire">#D0FF6262</color>
+    <color name="closeToExpireColor">#D0FDF67A</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="light_blue_600">#039BE5</color>
+    <color name="light_blue_A200">#40C4FF</color>
+    <color name="light_blue_900">#01579B</color>
+    <color name="light_blue_A400">#00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+</resources>
