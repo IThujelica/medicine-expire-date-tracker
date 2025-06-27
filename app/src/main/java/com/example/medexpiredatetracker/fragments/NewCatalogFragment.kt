@@ -86,7 +86,7 @@ class NewCatalogFragment : DialogFragment() {
                 R.id.greenToggle -> "green"
                 R.id.yellowToggle -> "yellow"
                 R.id.purpleToggle -> "purple"
-                else -> "white"
+                else -> "blue"
             }
         }
     }

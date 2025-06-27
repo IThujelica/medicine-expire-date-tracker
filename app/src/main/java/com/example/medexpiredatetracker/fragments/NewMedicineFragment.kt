@@ -144,8 +144,8 @@ class NewMedicineFragment : DialogFragment() {
     }
 
     private fun setupSaveButton(view: View) {
-        saveButton.isEnabled = false
         saveButton = view.findViewById(R.id.buttonSave)
+        saveButton.isEnabled = false
 
 
         saveButton.setOnClickListener {
@@ -183,5 +183,4 @@ class NewMedicineFragment : DialogFragment() {
         fun newInstance() = NewMedicineFragment()
         const val TAG = "new_medicine_fragment"
     }
-
 }

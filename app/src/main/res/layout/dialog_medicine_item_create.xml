@@ -7,7 +7,7 @@
     android:background="@drawable/rounded_field_white">
 
     <TextView
-        android:id="@+id/catalogCreator"
+        android:id="@+id/medicineCreator"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@drawable/rounded_header"
