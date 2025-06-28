@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="360dp"
+    android:layout_width="380dp"
     android:layout_height="350dp"
     android:layout_gravity="center"
     android:background="@drawable/rounded_field_white"
@@ -45,7 +45,7 @@
             android:textOn="" />
 
         <View
-            android:layout_width="0dp"
+            android:layout_width="5dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
 
@@ -58,7 +58,7 @@
             android:textOn="" />
 
         <View
-            android:layout_width="0dp"
+            android:layout_width="5dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
 
@@ -71,7 +71,7 @@
             android:textOn="" />
 
         <View
-            android:layout_width="0dp"
+            android:layout_width="5dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
 
@@ -84,7 +84,7 @@
             android:textOn="" />
 
         <View
-            android:layout_width="0dp"
+            android:layout_width="5dp"
             android:layout_height="0dp"
             android:layout_weight="1" />
 

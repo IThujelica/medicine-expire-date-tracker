@@ -1,6 +1,7 @@
 package com.example.medexpiredatetracker.fragments
 
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -51,16 +52,18 @@ class MedicineFragment(val category: Category) : Fragment(),
             {
                 print("medicine")
             },
-            { medicine ->
-                showCustomContextMenu(view, medicine)
+            { medicine, viewItem ->
+                showCustomContextMenu(viewItem, medicine)
                 true
             })
         listView.adapter = adapter
     }
 
     private fun showCustomContextMenu(view: View, medicine: Medicine) {
-        val popup = PopupMenu(requireActivity().applicationContext, view) //
+        val popup = PopupMenu(view.context, view) //
         popup.menuInflater.inflate(R.menu.context_menu, popup.menu)
+
+        popup.gravity = Gravity.END
 
         popup.setOnMenuItemClickListener { item ->
             when (item.itemId) {

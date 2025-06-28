@@ -77,8 +77,8 @@ class NewCatalogFragment : DialogFragment() {
                     toggle.isChecked = false
                 }
             }
-            clickedToggle.startAnimation(scaleUp)
             clickedToggle.isChecked = true
+            clickedToggle.startAnimation(scaleUp)
 
             selectedColor = when (clickedToggle.id) {
                 R.id.redToggle -> "red"
@@ -90,7 +90,6 @@ class NewCatalogFragment : DialogFragment() {
             }
         }
     }
-
 
     private fun setupEnterNameField(view: View) {
         enterNameField = view.findViewById(R.id.EnterTextCategoryName)

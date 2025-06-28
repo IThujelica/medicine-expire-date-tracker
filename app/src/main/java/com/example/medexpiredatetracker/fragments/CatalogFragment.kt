@@ -2,6 +2,7 @@ package com.example.medexpiredatetracker.fragments
 
 import android.content.Context
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -54,16 +55,18 @@ class CatalogFragment : Fragment(), NewCatalogFragment.CatalogGroupCreateListene
                     .addToBackStack(null)
                     .commit()
             },
-            { category ->
-                showCustomContextMenu(view, category)
+            { category, viewItem ->
+                showCustomContextMenu(viewItem, category)
                 true
             })
         listView.adapter = adapter
     }
 
     private fun showCustomContextMenu(view: View, category: Category) {
-        val popup = PopupMenu(requireActivity().applicationContext, view) //
+        val popup = PopupMenu(view.context, view)
         popup.menuInflater.inflate(R.menu.context_menu, popup.menu)
+
+        popup.gravity = Gravity.END
 
         popup.setOnMenuItemClickListener { item ->
             when (item.itemId) {

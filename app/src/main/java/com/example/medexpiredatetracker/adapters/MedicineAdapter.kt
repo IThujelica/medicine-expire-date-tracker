@@ -17,7 +17,7 @@ class MedicineAdapter(
     context: Context,
     private val items: List<Medicine>,
     private val onItemClick: (Medicine) -> Unit,
-    private val onItemLongClick: (Medicine) -> Boolean
+    private val onItemLongClick: (Medicine, View) -> Boolean
 ) : ArrayAdapter<Medicine>(context, R.layout.item_medicine, items) {
 
     private inner class ViewHolder {
@@ -69,7 +69,7 @@ class MedicineAdapter(
         }
 
         view.setOnClickListener { onItemClick(item) }
-        view.setOnLongClickListener{onItemLongClick(item)}
+        view.setOnLongClickListener{onItemLongClick(item, view)}
 
         return view
     }

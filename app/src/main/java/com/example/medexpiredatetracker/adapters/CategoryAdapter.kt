@@ -15,7 +15,7 @@ class CategoryAdapter(
     context: Context,
     private val items: List<Category>,
     private val onItemClick: (Category) -> Unit,
-    private val onItemLongClick: (Category) -> Boolean
+    private val onItemLongClick: (Category, View) -> Boolean
 ) : ArrayAdapter<Category>(context, R.layout.item_catalog, items) {
 
     private inner class ViewHolder {
@@ -41,17 +41,15 @@ class CategoryAdapter(
             "red" -> R.color.red
             "blue" -> R.color.blue
             "green" -> R.color.green
-            "white" -> R.color.white
+            "yellow" -> R.color.yellow
             "purple" -> R.color.purple
-            else -> R.color.white
+            else -> R.color.blue
         }
 
         holder.textView.text = item.name
         holder.textView.setBackgroundColor(ContextCompat.getColor(context, color))
         view.setOnClickListener { onItemClick(item) }
-        view.setOnLongClickListener{onItemLongClick(item)}
+        view.setOnLongClickListener{onItemLongClick(item, view)}
         return view
     }
-
-
 }
