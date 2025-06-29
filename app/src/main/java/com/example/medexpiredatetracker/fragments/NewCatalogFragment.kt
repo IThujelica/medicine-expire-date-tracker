@@ -69,15 +69,14 @@ class NewCatalogFragment : DialogFragment() {
     }
 
     private fun onColorToggleClick(clickedToggle: ToggleButton) {
-        if (!clickedToggle.isChecked) {
-            val allToggles = listOf(redToggle, blueToggle, greenToggle, yellowToggle, purpleToggle)
-            allToggles.forEach { toggle ->
-                if (toggle.isChecked) {
-                    toggle.startAnimation(scaleDown)
+        if (clickedToggle.isChecked) {
+            listOf(redToggle, blueToggle, greenToggle, yellowToggle, purpleToggle).forEach { toggle ->
+                if (toggle != clickedToggle && toggle.isChecked) {
                     toggle.isChecked = false
+                    toggle.startAnimation(scaleDown)
                 }
             }
-            clickedToggle.isChecked = true
+
             clickedToggle.startAnimation(scaleUp)
 
             selectedColor = when (clickedToggle.id) {
@@ -88,6 +87,8 @@ class NewCatalogFragment : DialogFragment() {
                 R.id.purpleToggle -> "purple"
                 else -> "blue"
             }
+        } else {
+            clickedToggle.isChecked = true
         }
     }
 
