@@ -73,10 +73,12 @@ class NewCatalogFragment : DialogFragment() {
             listOf(redToggle, blueToggle, greenToggle, yellowToggle, purpleToggle).forEach { toggle ->
                 if (toggle != clickedToggle && toggle.isChecked) {
                     toggle.isChecked = false
+                    toggle.clearAnimation()
                     toggle.startAnimation(scaleDown)
                 }
             }
 
+            clickedToggle.clearAnimation()
             clickedToggle.startAnimation(scaleUp)
 
             selectedColor = when (clickedToggle.id) {
